@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function HeaderNavBar() {
+
    const [open, setOpen] = useState(false);
+
    return (
       <>
 
@@ -13,7 +15,7 @@ function HeaderNavBar() {
                      <img src="img/logo.png" alt="logo" />
                   </div>
                </div>
-               <nav className="navbar">
+               <nav className="nav-bar">
                   <div className="nav-user">
                      <i className="fa-solid fa-circle-user" onClick={() => { setOpen(!open) }}></i>
                   </div>
@@ -24,8 +26,8 @@ function HeaderNavBar() {
             </div>
             <div>
                {open && (
-                  <div className="dropdown-menu">
-                     <ul >
+                  <div className="drop-menu">
+                     <ul>
                         <li><Link >Profilo</Link></li>
                         <li><Link >Notifiche</Link></li>
                         <li><Link to='/'>Esci</Link></li>

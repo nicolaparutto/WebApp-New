@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function TravelCard({ viaggio }) {
 
-   const { dataInizio, dataFine, id, nome, immagine } = viaggio;
+   const { dataInizio, dataFine, id, nome, immagine, accompagnatori } = viaggio;
 
    // Funzione per calcolare i giorni di viaggio
    const calcolaGiorni = (dataInizio, dataFine) => {
@@ -29,14 +29,14 @@ function TravelCard({ viaggio }) {
       <div className="travel-card">
          <div className="travel-card-content">
             <div className="content-text">
-               <div className="text">
+               <div>
                   <h3>{nome}</h3>
                   <h5>{estraiAnno(dataInizio)}</h5>
                   <span>
                      {formattaData(dataInizio)} - {formattaData(dataFine)} | {calcolaGiorni(dataInizio, dataFine)} giorni
                   </span>
                </div>
-               <button className="btn-sm"><Link to={`/travel-detail/${id}`}>Vedi dettagli</Link></button>
+               <button className="button-sm"><Link to={`/travel-detail/${id}`}>Vedi dettagli</Link></button>
             </div>
             <div className="content-img">
                <img src={immagine} alt={nome} />

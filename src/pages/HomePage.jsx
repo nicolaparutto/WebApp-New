@@ -35,7 +35,7 @@ function HomePage() {
          <h2>Lista Viaggi</h2>
 
          <div className="travels-list">
-            <h4>In corso</h4>
+            <h4>In corso:</h4>
             {ongoingTrip && (
                <div className="my-5">
                   <TravelCard key={ongoingTrip.id} viaggio={ongoingTrip} />
@@ -44,7 +44,7 @@ function HomePage() {
          </div>
 
          <div className="travels-list">
-            <h4>Viaggi Programmati</h4>
+            <h4>Viaggi Programmati:</h4>
             {scheduledTrips.map(viaggio => (
                <TravelCard key={viaggio.id} viaggio={viaggio} />
             ))}

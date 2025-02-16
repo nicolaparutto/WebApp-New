@@ -26,6 +26,9 @@ function LoginPage() {
       <section className="login-container">
 
          <form action="#" onSubmit={handleLogin}>
+            <div>
+               <img src="img/logo.png" alt="" />
+            </div>
             <h1>Effettua il login</h1>
             <p className="err-message">{message}</p>
             <input
@@ -42,7 +45,7 @@ function LoginPage() {
                value={password}
                onChange={(e) => setPassword(e.target.value)}
             />
-            <button className="btn" type="submit">Accedi</button>
+            <button className="button" type="submit">Accedi</button>
          </form>
       </section>
    )
