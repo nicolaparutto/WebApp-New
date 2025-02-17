@@ -27,21 +27,23 @@ function TravelCard({ viaggio }) {
 
    return (
       <div className="travel-card">
-         <div className="travel-card-content">
-            <div className="content-text">
-               <div>
-                  <h3>{nome}</h3>
-                  <h5>{estraiAnno(dataInizio)}</h5>
-                  <span>
-                     {formattaData(dataInizio)} - {formattaData(dataFine)} | {calcolaGiorni(dataInizio, dataFine)} giorni
-                  </span>
+         <Link to={`/travel-detail/${id}`}>
+            <div className="travel-card-content">
+               <div className="content-text">
+                  <div>
+                     <h3>{nome}</h3>
+                     <h5>{estraiAnno(dataInizio)}</h5>
+                     <span>
+                        {formattaData(dataInizio)} - {formattaData(dataFine)} | {calcolaGiorni(dataInizio, dataFine)} giorni
+                     </span>
+                  </div>
+
                </div>
-               <button className="button-sm"><Link to={`/travel-detail/${id}`}>Vedi dettagli</Link></button>
+               <div className="content-img">
+                  <img src={immagine} alt={nome} />
+               </div>
             </div>
-            <div className="content-img">
-               <img src={immagine} alt={nome} />
-            </div>
-         </div>
+         </Link>
       </div >
    )
 }

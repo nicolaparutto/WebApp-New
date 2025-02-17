@@ -198,6 +198,11 @@ form {
 .travel-card {
   margin-bottom: 20px;
 
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
   .travel-card-content {
     display: flex;
     justify-content: space-between;
@@ -205,11 +210,14 @@ form {
     border: 1px solid rgba(0, 0, 0, 0.164);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 1, 0, 0.2);
-    height: 150px;
+    height: 180px;
 
     .content-text {
       width: 60%;
       padding: 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
 
       h3 {
         font-weight: 500;
